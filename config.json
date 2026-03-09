@@ -8,11 +8,11 @@
       "protocol": "vless",
       "settings": {
         "clients": [
-          { "id": "${UUID_1}", "flow": "xtls-rprx-vision" },
-          { "id": "${UUID_2}", "flow": "xtls-rprx-vision" },
-          { "id": "${UUID_3}", "flow": "xtls-rprx-vision" },
-          { "id": "${UUID_4}", "flow": "xtls-rprx-vision" },
-          { "id": "${UUID_5}", "flow": "xtls-rprx-vision" }
+          { "id": "${UUID_1}" },
+          { "id": "${UUID_2}" },
+          { "id": "${UUID_3}" },
+          { "id": "${UUID_4}" },
+          { "id": "${UUID_5}" }
         ],
         "decryption": "none"
       },
