@@ -1,0 +1,40 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 8080,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          { "id": "${UUID_1}", "flow": "xtls-rprx-vision" },
+          { "id": "${UUID_2}", "flow": "xtls-rprx-vision" },
+          { "id": "${UUID_3}", "flow": "xtls-rprx-vision" },
+          { "id": "${UUID_4}", "flow": "xtls-rprx-vision" },
+          { "id": "${UUID_5}", "flow": "xtls-rprx-vision" }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "vk.com:443",
+          "serverNames": [
+            "vk.com",
+            "vkvideo.ru"
+          ],
+          "privateKey": "wH2bpgE2mOiqnQhXWRJCQlx9NQERA_k9fq7DEkX_QHM",
+          "shortIds": [ "6ba85179e30d4fc2" ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}
