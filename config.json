@@ -1,40 +1,21 @@
 {
-  "log": {
-    "loglevel": "debug"
-  },
-  "inbounds": [
-    {
-      "port": 3000,
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          { "id": "${UUID_1}" },
-          { "id": "${UUID_2}" },
-          { "id": "${UUID_3}" },
-          { "id": "${UUID_4}" },
-          { "id": "${UUID_5}" }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "dest": "vk.com:443",
-          "serverNames": [
-            "vk.com",
-            "vkvideo.ru"
-          ],
-          "privateKey": "wH2bpgE2mOiqnQhXWRJCQlx9NQERA_k9fq7DEkX_QHM",
-          "shortIds": [ "6ba85179e30d4fc2" ]
-        }
-      }
+  "inbounds": [{
+    "port": "PORT",
+    "protocol": "vless",
+    "settings": {
+      "clients": [
+        { "id": "UUID1" },
+        { "id": "UUID2" },
+        { "id": "UUID3" },
+        { "id": "UUID4" },
+        { "id": "UUID5" }
+      ],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": { "path": "/" }
     }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ]
+  }],
+  "outbounds": [{ "protocol": "freedom" }]
 }
